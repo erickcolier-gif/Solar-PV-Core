@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones Solares Fotovoltaicas de Ingeniería Avanzada</title>
+    <!-- Carga de Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configuración de color para Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'solar-blue': '#1e3a8a', // Azul oscuro para contraste
+                        'solar-yellow': '#fcd34d', // Amarillo brillante para CTAs
+                        'solar-light': '#fef3c7', // Amarillo muy claro para fondos
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- Fuente Inter (Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        /* Estilo para la sección Hero con efecto visual */
+        #hero-section {
+            background-image: linear-gradient(rgba(102, 6, 6, 0.5), rgba(210, 132, 30, 0.982)), url('https://placehold.co/1200x800/1e3a8a/fef3c7?text=Instalaci%C3%B3n+Solar+Moderna');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Estilo para el contenedor del formulario */
+        .form-card {
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans antialiased">
+
+    <!-- Sección 1: Hero y CTA Principal -->
+    <header id="hero-section" class="pt-20 pb-32 md:pt-40 md:pb-64 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold mb-4 leading-tight">
+                Genera tu Propia Energía.
+            </h1>
+            <p class="text-xl sm:text-2xl mb-10 font-light max-w-3xl mx-auto">
+                Sistemas Fotovoltaicos de Ingeniería Avanzada que garantizan el máximo ahorro y rendimiento.
+            </p>
+            <a href="#calculator-section" class="bg-solar-yellow text-solar-blue hover:bg-yellow-300 font-bold py-4 px-10 rounded-xl transition duration-300 transform hover:scale-105 inline-block text-lg shadow-lg">
+                Calcula tu Ahorro Solar Gratuito
+            </a>
+        </div>
+    </header>
+
+    <!-- Sección 2: Servicios Clave y Diferenciadores -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-solar-blue mb-12">
+                Nuestra Ingeniería, Tu Rendimiento
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Característica 1: Diseño y Optimización -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-solar-yellow hover:shadow-xl transition duration-300">
+                    <div class="text-solar-yellow mb-4">
+                        <!-- Icono de Diseño (SVG) -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v13m-6 3h12a2 2 0 002-2v-3a2 2 0 00-2-2H6a2 2 0 00-2 2v3a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-solar-blue">Optimización de Diseño y Modelado</h3>
+                    <p class="text-gray-600">Utilizamos software avanzado para el modelado de sistemas. Determinamos la orientación y la inclinación óptima ($\gamma, \beta$) para maximizar la eficiencia y predecir la generación de energía.</p>
+                </div>
+
+                <!-- Característica 2: Monitoreo y Datos de Rendimiento -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-solar-yellow hover:shadow-xl transition duration-300">
+                    <div class="text-solar-yellow mb-4">
+                        <!-- Icono de Monitor (SVG) -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1v-3.25M7 13h10v6H7v-6zM4 5h16a1 1 0 011 1v7a1 1 0 01-1 1H4a1 1 0 01-1-1V6a1 1 0 011-1z"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-solar-blue">Monitoreo 24/7 y Predicciones</h3>
+                    <p class="text-gray-600">Monitoreo constante y predicciones de generación energética solar basadas en datos climáticos. Extraemos datos de rendimiento clave para asegurar la máxima eficiencia de tus paneles.</p>
+                </div>
+
+                <!-- Característica 3: Integración y Dashboards -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-solar-yellow hover:shadow-xl transition duration-300">
+                    <div class="text-solar-yellow mb-4">
+                        <!-- Icono de Dashboard (SVG) -->
+                        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-solar-blue">Dashboard de Cliente Personalizado</h3>
+                    <p class="text-gray-600">Facilitamos la integración con dashboards de clientes. Accede fácilmente a tus datos de rendimiento, eficiencia y proyecciones de ahorro desde cualquier dispositivo móvil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Calculadora de Ahorro y Formulario (Conversión) -->
+    <section id="calculator-section" class="py-16 md:py-24 bg-solar-light">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-solar-blue mb-6">
+                Calculadora de Eficiencia Solar
+            </h2>
+            <p class="text-center text-gray-700 mb-10 max-w-2xl mx-auto">
+                Ingresa tu consumo mensual para obtener una estimación de ahorro. Es el primer paso hacia tu independencia energética.
+            </p>
+
+            <div class="bg-white p-6 sm:p-10 rounded-xl form-card">
+                <form id="solar-calculator-form">
+                    <div class="mb-6">
+                        <label for="bill" class="block text-sm font-medium text-gray-700 mb-2">
+                            Monto Promedio de tu Factura Mensual (en tu moneda local):
+                        </label>
+                        <input type="number" id="bill" name="bill" required placeholder="Ej: 150 (Sin símbolos)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-solar-blue focus:border-solar-blue">
+                    </div>
+
+                    <button type="submit" class="w-full bg-solar-blue text-white hover:bg-solar-yellow hover:text-solar-blue font-bold py-3 rounded-lg transition duration-300 transform hover:scale-[1.01] text-lg">
+                        Calcular Ahorro Estimado
+                    </button>
+                </form>
+
+                <div id="result-message" class="mt-8 p-4 bg-green-50 border border-green-200 text-green-700 rounded-lg hidden" role="alert">
+                    <p class="font-semibold" id="result-text"></p>
+                    <p class="mt-2 text-sm">El cálculo se basa en una eficiencia promedio del 90% para tu rango de consumo. Completa el formulario abajo para un estudio de ingeniería personalizado.</p>
+                </div>
+
+                <!-- Formulario de Contacto (Aparece después del cálculo o siempre visible) -->
+                <div class="mt-10 pt-6 border-t border-gray-100">
+                    <h3 class="text-2xl font-bold text-solar-blue mb-4 text-center">
+                        Solicita tu Estudio de Viabilidad Gratuito
+                    </h3>
+                    <form id="contact-form">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Nombre Completo" required class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-solar-blue focus:border-solar-blue">
+                            <input type="tel" placeholder="Teléfono" required class="px-4 py-3 border border-gray-300 rounded-lg focus:ring-solar-blue focus:border-solar-blue">
+                        </div>
+                        <div class="mt-4">
+                            <input type="email" placeholder="Correo Electrónico" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-solar-blue focus:border-solar-blue">
+                        </div>
+                        <div class="mt-4">
+                            <textarea placeholder="Comentarios o Dirección (Opcional)" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-solar-blue focus:border-solar-blue"></textarea>
+                        </div>
+                        <button type="button" onclick="submitForm()" class="w-full mt-6 bg-solar-yellow text-solar-blue hover:bg-yellow-400 font-bold py-3 rounded-lg transition duration-300 text-lg shadow-md">
+                            Enviar Solicitud
+                        </button>
+                    </form>
+                    <div id="form-message" class="mt-4 p-4 text-center hidden rounded-lg bg-green-100 text-green-700">
+                        ¡Gracias! Hemos recibido tu solicitud. Pronto nos pondremos en contacto para coordinar tu estudio.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 4: Monitoreo, Dashboards y Datos de Rendimiento (Visual Simulado) -->
+    <section class="py-16 md:py-24 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-solar-blue mb-6">
+                Monitoreo en Tiempo Real y Predicciones
+            </h2>
+            <p class="text-center text-gray-700 mb-12 max-w-2xl mx-auto">
+                Nuestro valor añadido: te damos control total sobre tu producción. Accede a tu dashboard personalizado.
+            </p>
+
+            <div class="bg-white p-6 sm:p-10 rounded-xl shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <!-- Dashboard Simulado (Placeholder Visual) -->
+                    <div class="bg-gray-800 p-6 rounded-lg shadow-inner text-white">
+                        <h3 class="text-xl font-bold mb-4 border-b border-gray-600 pb-2 flex justify-between items-center">
+                            Dashboard de Producción (Simulado)
+                            <span class="text-sm font-light text-green-400">EN VIVO</span>
+                        </h3>
+                        <div class="space-y-4">
+                            <p class="flex justify-between">
+                                <span class="font-medium">Generación Hoy:</span>
+                                <span class="text-yellow-400 font-extrabold">12.4 kWh</span>
+                            </p>
+                            <p class="flex justify-between">
+                                <span class="font-medium">Ahorro Mensual Estimado:</span>
+                                <span class="text-green-400 font-extrabold">92.000 (Moneda Local)</span>
+                            </p>
+                            <p class="flex justify-between border-t border-gray-700 pt-3">
+                                <span class="font-medium">Eficiencia del Sistema:</span>
+                                <span class="text-white font-extrabold">98.5%</span>
+                            </p>
+                        </div>
+                        <div class="mt-6">
+                            <p class="text-sm text-gray-400">Gráfico de Rendimiento Anual: [Visual de Barras Simulado]</p>
+                            <img src="https://placehold.co/600x200/374151/fcd34d?text=Gráfico+de+Generación+Energética" alt="Gráfico de Generación Energética Simulado" class="w-full h-auto rounded-lg mt-2">
+                        </div>
+                    </div>
+
+                    <!-- Datos y Predicciones -->
+                    <div class="space-y-6">
+                        <h3 class="text-2xl font-bold text-solar-blue">Acceso a Datos Clave</h3>
+                        <div class="p-4 bg-white rounded-lg border-l-4 border-solar-yellow shadow-sm">
+                            <p class="font-semibold text-gray-800">Cálculo de Eficiencia ($\eta$):</p>
+                            <p class="text-gray-600 text-sm">Monitoreamos el rendimiento real vs. el potencial, ajustando la fórmula de generación diaria ($E = \eta \cdot H_d \cdot P_p$) para máxima precisión.</p>
+                        </div>
+                        <div class="p-4 bg-white rounded-lg border-l-4 border-solar-yellow shadow-sm">
+                            <p class="font-semibold text-gray-800">Predicción Meteorológica:</p>
+                            <p class="text-gray-600 text-sm">Modelos predictivos que anticipan la generación futura, facilitando la gestión de tu consumo y energía excedente.</p>
+                        </div>
+                        <a href="#contact-form" class="inline-block mt-4 text-solar-blue font-semibold hover:text-solar-yellow transition duration-300">
+                            Ver Demo del Dashboard &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 5: Clientes y Testimonios (Prueba Social) -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-center text-solar-blue mb-12">
+                Nuestros Clientes lo Confirman
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-md border-t-2 border-solar-blue">
+                    <p class="italic text-gray-700 mb-4">"El estudio de eficiencia fue increíblemente detallado. Ahorramos un 35% más de lo que esperábamos gracias a la optimización de la inclinación del diseño."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/40x40/fcd34d/1e3a8a?text=C" alt="Foto Cliente 1" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-solar-blue">Carlos M.</p>
+                            <p class="text-sm text-gray-500">Empresario, Sector Industrial</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-md border-t-2 border-solar-blue">
+                    <p class="italic text-gray-700 mb-4">"El dashboard de monitoreo es excelente. Ver mis datos de rendimiento en tiempo real y las predicciones me da mucha tranquilidad."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/40x40/fcd34d/1e3a8a?text=A" alt="Foto Cliente 2" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-solar-blue">Ana R.</p>
+                            <p class="text-sm text-gray-500">Propietaria de Vivienda</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="bg-gray-100 p-6 rounded-xl shadow-md border-t-2 border-solar-blue">
+                    <p class="italic text-gray-700 mb-4">"La instalación fue rápida y limpia. Su enfoque técnico y la garantía extendida nos convencieron de que era la mejor inversión a largo plazo."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/40x40/fcd34d/1e3a8a?text=J" alt="Foto Cliente 3" class="w-10 h-10 rounded-full mr-3">
+                        <div>
+                            <p class="font-semibold text-solar-blue">Jorge S.</p>
+                            <p class="text-sm text-gray-500">Administrador de Edificio</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carrusel Simulado de Fotos -->
+            <div class="mt-16 text-center">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6">Proyectos Destacados</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <img src="https://placehold.co/300x200/34d399/ffffff?text=Residencial" alt="Proyecto Residencial" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    <img src="https://placehold.co/300x200/4f46e5/ffffff?text=Comercial" alt="Proyecto Comercial" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    <img src="https://placehold.co/300x200/f59e0b/ffffff?text=Techo+Plano" alt="Proyecto Techo Plano" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                    <img src="https://placehold.co/300x200/10b981/ffffff?text=Detalle+Inversor" alt="Detalle Inversor" class="rounded-xl shadow-lg w-full h-auto object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-solar-blue py-12">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-2xl font-bold text-white mb-4">Tu Futuro Energético Comienza Aquí</h3>
+            <a href="#calculator-section" class="bg-solar-yellow text-solar-blue hover:bg-yellow-300 font-bold py-3 px-8 rounded-lg transition duration-300 inline-block text-lg shadow-lg">
+                Agenda tu Consulta Ahora
+            </a>
+            <p class="text-gray-400 mt-8 text-sm">&copy; 2025 Servicios Solares Fotovoltaicos. Todos los derechos reservados. | Contacto: info@solarempresa.com</p>
+        </div>
+    </footer>
+
+    <script>
+        // Log Configuration for Firebase (even if not strictly used in this static HTML, it's good practice)
+        // Ensure this logic runs after DOM is loaded if using a full framework
+        console.log("Página cargada. Iniciar lógica de formulario/cálculo.");
+
+        document.getElementById('solar-calculator-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const billInput = document.getElementById('bill');
+            const billAmount = parseFloat(billInput.value);
+            const resultMessage = document.getElementById('result-message');
+            const resultText = document.getElementById('result-text');
+
+            // Simulación de cálculo: Ahorro estimado basado en el monto de la factura.
+            // La lógica es simple: estima que se puede cubrir el 70-85% del costo actual con un sistema.
+            if (billAmount > 0) {
+                // Genera un factor de ahorro simulado (ej: 75% del monto de la factura)
+                const savingsFactor = 0.75 + (Math.random() * 0.1); // Entre 75% y 85%
+                const estimatedSavings = Math.round(billAmount * savingsFactor);
+                
+                // Formato de moneda simulado (usando un separador de miles y sin decimales)
+                const formattedSavings = estimatedSavings.toLocaleString('es-ES');
+
+                resultText.innerHTML = `
+                    ¡Excelente! Tu ahorro estimado al mes es de
+                    <span class="text-xl font-extrabold text-green-800">${formattedSavings}</span>
+                    (Moneda Local)
+                `;
+                resultMessage.classList.remove('hidden');
+                
+                // Mover al formulario de contacto para el siguiente paso
+                document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            } else {
+                resultText.textContent = 'Por favor, introduce un monto válido para la factura.';
+                resultMessage.classList.remove('hidden');
+                resultMessage.classList.remove('bg-green-50', 'text-green-700');
+                resultMessage.classList.add('bg-red-50', 'text-red-700');
+            }
+        });
+
+        function submitForm() {
+            // En una aplicación real, aquí se enviaría el formulario a un servidor o base de datos (como Firestore)
+            const contactForm = document.getElementById('contact-form');
+            const formMessage = document.getElementById('form-message');
+
+            // Simulación de validación simple y envío exitoso
+            let isValid = true;
+            contactForm.querySelectorAll('input[required]').forEach(input => {
+                if (!input.value) {
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                // Ocultar formulario
+                contactForm.classList.add('hidden');
+                
+                // Mostrar mensaje de éxito
+                formMessage.classList.remove('hidden');
+
+                // En un entorno real (con Firestore), usarías addDoc aquí
+                // console.log("Datos listos para ser enviados a Firestore...");
+                
+            } else {
+                // Simulación de mensaje de error si faltan campos
+                formMessage.textContent = 'Por favor, rellena todos los campos obligatorios (Nombre, Teléfono, Email).';
+                formMessage.classList.remove('hidden', 'bg-green-100', 'text-green-700');
+                formMessage.classList.add('bg-red-100', 'text-red-700');
+            }
+        }
+    </script>
+
+</body>
+</html>
